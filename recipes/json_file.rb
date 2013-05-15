@@ -1,7 +1,7 @@
 #
 # Author:: Seth Chisamore (<schisamo@opscode.com>)
 # Cookbook Name:: chef_handlers
-# Recipe:: default
+# Recipe:: json_file
 #
 # Copyright 2011, Opscode, Inc.
 #
@@ -18,9 +18,11 @@
 # limitations under the License.
 #
 
-Chef::Log.info("Chef Handlers will be at: #{node['chef_handler']['handler_path']}")
+# force resource actions in compile phase so exception handler 
+# fires for compile phase exceptions
 
-remote_directory node['chef_handler']['handler_path'] do
-  source 'handlers'
+chef_handler "Chef::Handler::JsonFile" do
+  source "chef/handler/json_file"
+  arguments :path => '/var/chef/reports'
   action :nothing
-end.run_action(:create)
+end.run_action(:enable)

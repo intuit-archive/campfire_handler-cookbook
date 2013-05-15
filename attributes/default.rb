@@ -1,9 +1,9 @@
 #
 # Author:: Seth Chisamore (<schisamo@opscode.com>)
 # Cookbook Name:: chef_handlers
-# Recipe:: default
+# Attribute:: default
 #
-# Copyright 2011, Opscode, Inc.
+# Copyright 2011, Opscode, Inc
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,9 +18,4 @@
 # limitations under the License.
 #
 
-Chef::Log.info("Chef Handlers will be at: #{node['chef_handler']['handler_path']}")
-
-remote_directory node['chef_handler']['handler_path'] do
-  source 'handlers'
-  action :nothing
-end.run_action(:create)
+default["chef_handler"]["handler_path"] = "#{File.expand_path(File.join(Chef::Config[:file_cache_path],'..'))}/handlers"

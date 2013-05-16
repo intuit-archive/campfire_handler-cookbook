@@ -21,6 +21,10 @@ class Chef
       def report
         message   = "-d '#{message_body @message}'"
         exception = "-d '#{message_body run_status.formatted_exception}'"
+
+        Chef::Log.debug("Kevin Debug message: #{@base_cmd} #{message} #{@url}")
+        Chef::Log.debug("Kevin Debug exception: #{@base_cmd} #{exception} #{@url}")
+
         `#{@base_cmd} #{message} #{@url}`
         `#{@base_cmd} #{exception} #{@url}`
       end

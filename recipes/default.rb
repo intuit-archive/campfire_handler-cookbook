@@ -1,12 +1,13 @@
 include_recipe 'chef_handler'
 
-campfire  = node['campfire_handler']['campfire']  
-stack     = node['campfire_handler']['stack']     
-ip        = node['campfire_handler']['ip']        
-message   = node['campfire_handler']['message']   
-subdomain = node['campfire_handler']['subdomain'] 
-token     = node['campfire_handler']['token']     
-room_id   = node['campfire_handler']['room_id']   
+campfire  = node['campfire_handler']['campfire']
+stack     = node['campfire_handler']['stack']
+ip        = node['campfire_handler']['ip']
+message   = "Chef Exception! Stack: '#{stack}' , Public IP: '#{ip}'"
+subdomain = campfire['subdomain']
+token     = campfire['token']
+room_id   = campfire['room_id']
+
 
 Chef::Log.info("Kevin - campfire #{campfire}")
 Chef::Log.info("Kevin - stack #{stack}")

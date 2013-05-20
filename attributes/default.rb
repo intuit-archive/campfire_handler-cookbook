@@ -1,9 +1,3 @@
-default['campfire_handler']['campfire']  = ''
-default['campfire_handler']['stack']     = ''
-default['campfire_handler']['ip']        = ''
-default['campfire_handler']['message']   = ''
-default['campfire_handler']['subdomain'] = ''
-default['campfire_handler']['token']     = ''
-default['campfire_handler']['room_id']   = ''
-
-
+default['campfire_handler']['campfire']  = 'change_me_campfire'
+default['campfire_handler']['stack']     = 'change_me_stack'
+default['campfire_handler']['ip']        = 'change_me_ip'

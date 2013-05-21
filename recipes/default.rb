@@ -4,9 +4,9 @@ campfire  = node['campfire_handler']['campfire']
 stack     = node['campfire_handler']['stack']
 ip        = node['campfire_handler']['ip']
 message   = "Chef Exception! Stack: '#{stack}' , Public IP: '#{ip}'"
-subdomain = campfire['subdomain']
-token     = campfire['token']
-room_id   = campfire['room_id']
+token     = node['campfire_handler']['campfire']['token']
+room_id   = node['campfire_handler']['campfire']['room_id']
+subdomain = node['campfire_handler']['campfire']['subdomain']
 
 cookbook_file "#{node['chef_handler']['handler_path']}/campfire.rb" do
   source 'campfire.rb'

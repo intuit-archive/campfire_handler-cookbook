@@ -8,15 +8,6 @@ subdomain = campfire['subdomain']
 token     = campfire['token']
 room_id   = campfire['room_id']
 
-
-Chef::Log.info("Kevin - campfire #{campfire}")
-Chef::Log.info("Kevin - stack #{stack}")
-Chef::Log.info("Kevin - ip #{ip}")
-Chef::Log.info("Kevin - message #{message}")
-Chef::Log.info("Kevin - subdomain #{subdomain}")
-Chef::Log.info("Kevin - token #{token}")
-Chef::Log.info("Kevin - room_id #{room_id}")
-
 cookbook_file "#{node['chef_handler']['handler_path']}/campfire.rb" do
   source 'campfire.rb'
   action :nothing

@@ -6,7 +6,7 @@ Installs chef_handler, and installs and configures campfire_handler
 
 * Chef 10.x
 
-Platform:
+## Platform:
 * CentOS 6.x
 * RHEL 6.x
 

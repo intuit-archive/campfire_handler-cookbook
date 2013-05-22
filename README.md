@@ -17,13 +17,10 @@ Put the recipe `campfire_handler-cookbook` as early in the run list as possible
 # Attributes
 ## Default
 
-`node['campfire_handler']['token']`      - The token for campfire 
-
-`node['campfire_handler']['room_id']`    - Campfire room to post to
-
-`node['campfire_handler']['message']`    - Message that will be posted
-
-`node['campfire_handler']['subdomain']`  - Campfire subdomain
+`node['campfire_handler']['token']`      - The token for campfire.
+`node['campfire_handler']['room_id']`    - Campfire room to post to.
+`node['campfire_handler']['message']`    - Message that will be posted.
+`node['campfire_handler']['subdomain']`  - Campfire subdomain.
 
 # Recipes
 ## default

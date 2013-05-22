@@ -6,7 +6,7 @@ Installs chef_handler, and installs and configures campfire_handler
 
 * Chef 10.x
 
-## Platform:
+## Platform
 * CentOS 6.x
 * RHEL 6.x
 
@@ -18,8 +18,11 @@ Put the recipe `campfire_handler-cookbook` as early in the run list as possible
 ## Default
 
 `node['campfire_handler']['token']`      - The token for campfire 
+
 `node['campfire_handler']['room_id']`    - Campfire room to post to
+
 `node['campfire_handler']['message']`    - Message that will be posted
+
 `node['campfire_handler']['subdomain']`  - Campfire subdomain
 
 # Recipes

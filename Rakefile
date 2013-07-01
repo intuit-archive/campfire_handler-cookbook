@@ -1,3 +1,4 @@
+require 'cheftest/rake'
 require 'foodcritic'
 
 FoodCritic::Rake::LintTask.new do |t|

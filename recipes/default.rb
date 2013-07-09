@@ -11,7 +11,7 @@ cookbook_file "#{node['chef_handler']['handler_path']}/campfire.rb" do
 end.run_action(:create)
 
 chef_handler "Chef::Handler::Campfire" do
-  source "/var/chef/handlers/campfire"
+  source "#{node['chef_handler']['handler_path']}/campfire"
   arguments [ subdomain, token, room_id, message ]
   action :nothing
   supports :report => false, :exception => true

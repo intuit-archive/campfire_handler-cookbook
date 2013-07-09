@@ -6,4 +6,4 @@ description      "Handler for campfire to be used in conjunction with chef_handl
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "0.1.0"
 
-depends "chef_handler"
+depends "chef_handler", "~> 1.1.0"

@@ -1,5 +1,7 @@
 # campfire_handler-cookbook cookbook
 
+**!!! This project has been deprecated.  We recommend you search the [Chef Supermarket ](https://supermarket.chef.io/) for a supported alternative !!!**
+
 Installs chef_handler, and installs and configures campfire_handler
 
 # Requirements
